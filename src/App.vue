@@ -4,21 +4,23 @@
     <div class="main-content">
       <div class="section section-kv">
         <div class="hamburger-menu">
-      <label class="menu__btn" for="menu__toggle" @click="menuOpen = true">
-        <span></span>
-      </label>
-      <div class="menu__box" v-if="menuOpen">
-        <ul class="menu__list">
-          <li><a class="menu__item" href="#" @click="menuOpen = false">Home</a></li>
-          <li><a class="menu__item" href="#" @click="menuOpen = false">About</a></li>
-          <li><a class="menu__item" href="#" @click="menuOpen = false">Services</a></li>
-          <li><a class="menu__item" href="#" @click="menuOpen = false">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-
-        <h1>芳</h1>
-        <p>ダミーのテキストです。ダミーのテキストです。ダミーのテキストです。</p>
+          <label class="menu__btn" for="menu__toggle" @click="menuOpen = true">
+            <span></span>
+          </label>
+          <div class="menu__box" v-if="menuOpen">
+            <ul class="menu__list">
+              <li><a class="menu__item" href="#" @click="menuOpen = false">Home</a></li>
+              <li><a class="menu__item" href="#" @click="menuOpen = false">About</a></li>
+              <li><a class="menu__item" href="#" @click="menuOpen = false">Services</a></li>
+              <li><a class="menu__item" href="#" @click="menuOpen = false">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="kv-text">
+          <h1>芳</h1>
+          <p>ダミーのテキストです。ダミーのテキストです。ダミーのテキストです。</p>
+        </div>
+        <img src="./assets/kv.jpg" alt="">
       </div>
       <div class="section section-hours">
         <h3>Hours</h3>
@@ -30,7 +32,7 @@
       </div>
       <div class="section section-location">
         <h3>アクセス</h3>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.314581179221!2d141.3018115765611!3d43.07688128951376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b284ea53ae893%3A0x4750c6f721882ee1!2z44CSMDYzLTA4MTEgSG9ra2FpZG8sIFNhcHBvcm8sIE5pc2hpIFdhcmQsIEtvdG9uaSAxIErFjSwgNC1jaMWNbWXiiJI04oiSMjEg44K_44Kx44OA44OT44Or!5e0!3m2!1sen!2sjp!4v1708171340788!5m2!1sen!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.314766162808!2d141.3043865!3d43.0768774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b284ea53ae893%3A0x4750c6f721882ee1!2z44CSMDYzLTA4MTEgSG9ra2FpZG8sIFNhcHBvcm8sIE5pc2hpIFdhcmQsIEtvdG9uaSAxIErFjSwgNC1jaMWNbWXiiJI04oiSMjEg44K_44Kx44OA44OT44Or!5e0!3m2!1sen!2sjp!4v1708440322308!5m2!1sen!2sjp" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
     <div class="right-side"></div>
@@ -96,6 +98,11 @@
   .main-content{
     min-height: 100vh;
   }
+  
+  .main-content{
+    position: relative;
+    overflow: hidden;
+  }
   .left-side,
   .right-side {
     width: calc((100vw - 650px) / 2);
@@ -107,6 +114,10 @@
   .right-side{
     background: blue;
   }
+
+  
+
+
 
   
 
@@ -184,21 +195,63 @@
       display: block;
   }
 
-    .main-content .section{
-      padding: 20px 5%;
-    }
+  .main-content .section{
+    padding: 20px 5%;
+  }
 
-    .main-content .section:nth-child(even){
-      background: purple;
-    }
+  .main-content .section:nth-child(even){
+    background: purple;
+    color: white;
+  }
 
-    .main-content .section-kv h1 {
-      text-align: center;
-      /* display: flex;
-      align-content: center;
-      justify-content: center; */
-    }
+  .main-content .section-kv{
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 5/4;
 
+    padding: 0;
+
+  }
+
+  .main-content .section-kv .kv-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    z-index: 20;
+
+    color: white;
+    font-weight: bold;
+
+    
+  }
+
+  .main-content .section-kv .kv-text h1 {
+    text-align: center;
+    font-size: 50px;
+    /* display: flex;
+    align-content: center;
+    justify-content: center; */
+  }
+
+  .main-content .section-kv img{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 100%;
+
+    z-index: 10;
+
+    filter: brightness(50%);
+  }
+  
+  .section-location{
+    text-align: center;
+  }
   @media screen and (max-width: 650px) {
     .main-content {
       width: 100vw;
