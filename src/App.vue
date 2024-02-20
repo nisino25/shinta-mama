@@ -127,6 +127,7 @@
 
   .hamburger-menu {
     position: relative;
+    z-index: 20;
   }
 
   .menu__toggle {
@@ -152,7 +153,7 @@
       position: absolute;
       width: 100%;
       height: 2px;
-      background-color: #333;
+      background-color: white;
   }
 
   .menu__btn > span::before {
@@ -220,7 +221,7 @@
     left: 50%;
     transform: translate(-50%,-50%);
 
-    z-index: 20;
+    z-index: 15;
 
     color: white;
     font-weight: bold;
