@@ -19,16 +19,21 @@
             </div>
           </div>
           <div class="kv-text aos-animation">
-            <h1>芳</h1>
+            <img src="./assets/kv-letter.png">
+            <!-- <h1>芳</h1> -->
             <!-- <p>ダミーのテキストです。ダミーのテキストです。ダミーのテキストです。</p> -->
           </div>
-          <img src="./assets/kv.jpg" alt="">
+          <img src="./assets/kv.jpg" class="kv-bg">
         </div>
       </div>
       <div class="section section-hours">
         <div class="section-inner aos-animation">
           <h3>- Hours -<span></span></h3>
-          <p>17:00-25:00</p>
+          <p>19時〜24時（変動あり）</p>
+          <p>【貸切り可能】</p>
+          <hr>
+          <p>お休み：日月祝（変動あり）</p>
+          <p>※お問い合せください</p>
         </div>
       </div>
 
@@ -91,16 +96,17 @@
           <div class="image-container">
             <img src="./assets/inside/inside-1.jpg" class="aos-animation">
             <img src="./assets/inside/inside-2.jpg" class="aos-animation">
-            <img src="./assets/inside/inside-3.jpg" class="aos-animation">
-            <img src="./assets/inside/inside-4.jpg" class="aos-animation">
-            <img src="./assets/inside/inside-5.jpg" class="aos-animation">
+            <img src="./assets/inside/inside-3.jpg?v=20240612" class="aos-animation">
+            <img src="./assets/inside/inside-4.jpg?v=20240612" class="aos-animation">
+            <img src="./assets/inside/inside-5.jpg?v=20240612" class="aos-animation">
+            <img src="./assets/inside/inside-6.jpg?v=20240612" class="aos-animation">
           </div>
         </div>
       </div>
       <div class="section section-location">
         <div class="section-inner aos-animation">
           <h3>- Access -</h3>
-          <h2>札幌市琴似</h2>
+          <h2>〒063-0811札幌市西区<br>琴似1条4丁目4-21タケダビル2F</h2>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.314766162808!2d141.3043865!3d43.0768774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b284ea53ae893%3A0x4750c6f721882ee1!2z44CSMDYzLTA4MTEgSG9ra2FpZG8sIFNhcHBvcm8sIE5pc2hpIFdhcmQsIEtvdG9uaSAxIErFjSwgNC1jaMWNbWXiiJI04oiSMjEg44K_44Kx44OA44OT44Or!5e0!3m2!1sen!2sjp!4v1708440322308!5m2!1sen!2sjp" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
@@ -165,6 +171,11 @@ import 'aos/dist/aos.css'
         {imgSrc: require('@/assets/drinks/drink-1.jpg'), price:null,name:'sake-1', type: 'bottle'},
         {imgSrc: require('@/assets/drinks/drink-2.jpg'), price:null,name:'sake-2', type: 'bottle'},
         {imgSrc: require('@/assets/drinks/drink-3.jpg'), price:null,name:'sake-3', type: 'bottle'},
+        {imgSrc: require('@/assets/drinks/drink-4.jpg'), price:null,name:'sake-3', type: 'bottle'},
+        {imgSrc: require('@/assets/drinks/drink-5.jpg'), price:null,name:'sake-3', type: 'bottle'},
+        {imgSrc: require('@/assets/drinks/drink-6.jpg'), price:null,name:'sake-3', type: 'bottle'},
+        {imgSrc: require('@/assets/drinks/drink-7.jpg'), price:null,name:'sake-3', type: 'bottle'},
+
       )
     },
     watch: {
@@ -327,7 +338,9 @@ import 'aos/dist/aos.css'
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -47.5%);
+
+    height: 65%;
 
     z-index: 15;
 
@@ -337,7 +350,7 @@ import 'aos/dist/aos.css'
     
   }
 
-  .main-content .section-kv .kv-text h1 {
+  .main-content .section-kv .kv-text img {
     text-align: center;
     font-size: 100px;
 
@@ -347,9 +360,12 @@ import 'aos/dist/aos.css'
     /* display: flex;
     align-content: center;
     justify-content: center; */
+
+    filter: brightness(0) invert(1) drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+    height: 100%;
   }
 
-  .main-content .section-kv img{
+  .main-content .section-kv .kv-bg{
     display: block;
     position: absolute;
     top: 50%;
@@ -379,7 +395,7 @@ import 'aos/dist/aos.css'
     font-size: .4em;
   }
 
-  /* ------------ */
+  /* ------------------------ */
 
   .main-content .section-menu h2{
     font-family: "Lobster", sans-serif;
