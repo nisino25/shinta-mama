@@ -94,12 +94,24 @@
         <div class="section-inner">
           <h3>- Inside -</h3>
           <div class="image-container">
-            <img src="./assets/inside/inside-1.jpg" class="aos-animation">
-            <img src="./assets/inside/inside-2.jpg" class="aos-animation">
-            <img src="./assets/inside/inside-3.jpg?v=20240612" class="aos-animation">
-            <img src="./assets/inside/inside-4.jpg?v=20240612" class="aos-animation">
-            <img src="./assets/inside/inside-5.jpg?v=20240612" class="aos-animation">
-            <img src="./assets/inside/inside-6.jpg?v=20240612" class="aos-animation">
+            <div class="image-block aos-animation">
+              <img src="./assets/inside/inside-1.jpg?v=20240612">
+            </div>
+            <div class="image-block aos-animation">
+              <img src="./assets/inside/inside-2.jpg?v=20240612">
+            </div>
+            <div class="image-block aos-animation">
+              <img src="./assets/inside/inside-3.jpg?v=20240612">
+            </div>
+            <div class="image-block aos-animation">
+              <img src="./assets/inside/inside-4.jpg?v=20240612">
+            </div>
+            <div class="image-block aos-animation">
+              <img src="./assets/inside/inside-5.jpg?v=20240612">
+            </div>
+            <div class="image-block aos-animation">
+              <img src="./assets/inside/inside-6.jpg?v=20240612">
+            </div>
           </div>
         </div>
       </div>
@@ -107,7 +119,7 @@
         <div class="section-inner aos-animation">
           <h3>- Access -</h3>
           <h2>〒063-0811<br>札幌市西区琴似1条4丁目<br>4-21タケダビル2F</h2>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.314766162808!2d141.3043865!3d43.0768774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b284ea53ae893%3A0x4750c6f721882ee1!2z44CSMDYzLTA4MTEgSG9ra2FpZG8sIFNhcHBvcm8sIE5pc2hpIFdhcmQsIEtvdG9uaSAxIErFjSwgNC1jaMWNbWXiiJI04oiSMjEg44K_44Kx44OA44OT44Or!5e0!3m2!1sen!2sjp!4v1708440322308!5m2!1sen!2sjp" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.3154856849233!2d141.30183787699792!3d43.07686227113532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b29ce728d9a51%3A0x7410f965a9f22ad1!2z6IqzIEtBR1VXQQ!5e0!3m2!1sen!2sjp!4v1719073676652!5m2!1sen!2sjp"  height="300" style="border:0;" width="100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
@@ -431,15 +443,23 @@ import 'aos/dist/aos.css'
   .main-content .section-inside .image-container{
     display: grid;
     margin: auto;
-    grid-template-columns: repeat(2,49%);
-    gap: 15px;
+    grid-template-columns: repeat(2,48%);
+    row-gap: 10px;
     justify-content: space-between;
   }
 
-  .main-content .section-inside .image-container img{
-    display: block;
+  .main-content .section-inside .image-container .image-block{
+    display: flex;
     border: 2px solid #BB9CC0;
+    overflow: hidden;
+
   }
+
+  .main-content .section-inside .image-container img{
+    /* display: block; */
+    /* border: 2px solid #BB9CC0; */
+  }
+
   
   .section-location{
     text-align: center;
